@@ -1,0 +1,35 @@
+Zadatak 1
+
+pwd
+ls
+mkdir vjezba1 && cd vjezba1
+touch README.md 
+cd ..
+
+
+Zadatak 2
+
+mkdir vjezba2 && cd vjezba2 && touch file.txt
+cp file.txt file_copy.txt
+ls
+rm file.txt && cd ..
+rmdir vjezba2 (rmdir: failed to remove 'vjezba2': Directory not empty)
+
+
+Zadatak 3
+
+mkdir vjezba3 && mkdir vjezba3/backup
+cd vjezba3 && touch notes.txt && touch todo.txt && touch script.sh
+cp notes.txt backup && cp todo.txt backup && cp script.sh backup
+rm script.sh && ls
+mkdir backup/$USER
+cd backup && mv notes.txt "$USER" && mv todo.txt "$USER" && mv script.sh "$USER"
+
+
+Zadatak 4
+
+cd /mnt/c/Users/karlo/Documents/GitHub/FIPU-OS-zadace/OS_1 && mkdir vjezba4 && mkdir vjezba4/subfolder
+touch vjezba4/"$HOSTNAME"
+cd vjezba4 && mv "$HOSTNAME" "$USER"
+mv "$USER" subfolder
+rm /mnt/c/Users/karlo/Documents/GitHub/FIPU-OS-zadace/OS_1/vjezba4/subfolder/"$USER"
