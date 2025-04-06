@@ -1,0 +1,56 @@
+Zadatak 1
+
+U radnom okruženju stvorite direktorije vjezba_2/data i vjezba_2/backup koristeći dvije naredbe mkdir
+mkdir -p vjezba_2/data
+mkdir -p vjezba_2/backup
+
+Unutar direktorija data stvorite sljedeće datoteke: script.js, style.css, .env
+cd vjezba_2/data
+touch script.js style.css .env
+
+Naredbom echo unesite sljedeći sadržaj u datoteke:
+echo 'console.log("Hello, World!")' > script.js
+echo "body { background-color: #f0f0f0; }" > style.css
+echo "VJEBE=OS" > .env
+
+
+Zadatak 2
+
+Kopirajte sav sadržaj direktorija data u direktorij backup koristeći odgovarajuću naredbu
+cp -v * .env ../backup
+
+Prebacite se u direktorij data i napravite detaljan ispis direktorija backup . Ispis mora biti detaljan,
+uključivati sve skrivene datoteke i biti sortiran po veličini
+ls -laS
+
+
+Zadatak 3
+
+Jednom naredbom izbrišite sve datoteke u direktoriju data osim datoteke .env koristeći odgovarajuće
+zastavice
+rm -v *
+
+Napravite ponovno direktorij data i kopirajte u njega sve datoteke iz direktorija backup koristeći
+odgovarajuću naredbu, ali spriječite prepisivanje datoteka koje već postoje
+cp -nv ../backup/* ./
+
+Detaljno ispišite sadržaj direktorija data koji mora sadržavati skrivene datoteke osim pokazivača na
+trenutni i radni direktorij, sortirane po datumu zadnje izmjene i svaki zapis u novom redu
+ls -lAS
+
+
+Zadatak 4
+
+Prebacite se u direktorij i napišite sljedeće naredbe: 
+cd dummy_folder
+
+Izlistaj detaljno sadržaj glavnog direktorija, uključujući sve skrivene datoteke i sortiraj po veličini
+ls -laS
+
+Izlistaj detaljno sadržaj glavnog direktorija, bez skrivenih datoteka, sortiraj po veličini i prikaži jedinice
+(KB, MB, GB) uz veličinu datoteka
+ls -lSh
+
+Izlistaj sav sadržaj direktorija (uključujući poddirektorije i njihove datoteke i skrivene datoteke), ispis
+neka bude u boji i sortiran po datumu zadnje izmjene (najnovije na početku)
+ls -laRt --color
